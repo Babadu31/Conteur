@@ -12,7 +12,7 @@ function generateStory(event) {
   const theme = document.getElementById("theme-input").value;
   const characteristic = document.getElementById("characteristic-input").value;
   const adjective = document.getElementById("adjective-input").value;
-  const apiKey = "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";
+  const apiKey = "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";
 
   fetch("https://api.openai.com/v1/completions", {
     method: "POST",
@@ -23,7 +23,7 @@ function generateStory(event) {
     body: JSON.stringify({
       model: "text-davinci-003",
       prompt: `Imagine moi une histoire pour les enfants, sur lesquel le récrit s appuie fortement sur le sujet du ${theme} tout en s appuyant sur ${characteristic} et devra obligatoirement comporter des personnages ayant des caractéristiques ${adjective}, et cette histoire doit être très drôle. Limite cette histoire à 300 mots`,
-      max_tokens: 1500,
+      max_tokens: 3000,
       temperature: 0,
     })
   })

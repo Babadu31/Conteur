@@ -5,6 +5,7 @@ body {
   font-family: 'Lombardina Initial Two', cursive;
   background-color:white;
   background-image:url(image_de_fond.png);
+  background-size: cover;
 }
 
 /* En-tête */
@@ -88,7 +89,7 @@ main {
   border: 1px solid #ccc;
   background-color: black; /* Ajout du fond noir */
   color: white; /* Ajout de la police blanche */
-  font-family: Arial, sans-serif; /* Utilisation de la même police que le reste du site HTML */
+  font-family: 'Lombardina Initial Two', cursive;
 }
   
 h2 {
@@ -118,13 +119,10 @@ a:hover {
 
 /* Style pour le bouton de lecture vocale */
 #read-button {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   margin: 20px;
   z-index: 100;
 }
-#read-button.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
+
