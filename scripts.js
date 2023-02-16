@@ -12,9 +12,48 @@ function generateStory(event) {
   const theme = document.getElementById("theme-input").value;
   const characteristic = document.getElementById("characteristic-input").value;
   const adjective = document.getElementById("adjective-input").value;
-  const apiKey = "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";
+  const apiKey = "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";
 
-      /*   Ci-dessous une requête-histoire dans laquelle tu imagine pour moi une histoire pour enfant 
+  fetch("https://api.openai.com/v1/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`
+    },
+    body: JSON.stringify({
+      model: "text-davinci-003",
+      prompt: `Imagine moi une histoire pour les enfants, sur lesquel le récrit s appuie fortement sur le sujet du ${theme} tout en s appuyant sur ${characteristic} et devra obligatoirement comporter des personnages ayant des caractéristiques ${adjective}, et cette histoire doit être très drôle. Limite cette histoire à 300 mots`,
+      max_tokens: 1500,
+      temperature: 0,
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    const storyOutput = data.choices[0].text;
+    const outputElement = document.createElement("p");
+    outputElement.innerText = storyOutput;
+    const footer = document.querySelector("footer");
+    footer.parentNode.insertBefore(outputElement, footer.nextSibling);
+
+    const loadingMessage = document.querySelector('main p');
+    const main = document.querySelector('main');
+    main.innerHTML = '';
+    main.appendChild(outputElement);
+    loadingMessage.remove();
+  })
+  .catch(error => console.error(error));
+}
+
+function readText() {
+  const mainText = document.querySelector("main").textContent;
+  const speech = new SpeechSynthesisUtterance();
+  speech.text = mainText;
+  speechSynthesis.speak(speech);
+}
+
+
+/*   Ci-dessous une requête-histoire dans laquelle tu imagine pour moi une histoire pour enfant 
       Ci-dessous un exemple d'histoires pour enfants, tu trouveras le titre et histoire pour t'inspirer.
       
       
@@ -44,38 +83,3 @@ function generateStory(event) {
       ----
 
       */
-  fetch("https://api.openai.com/v1/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      model: "text-davinci-003",
-      prompt: `Imagine moi une histoire pour les enfants, sur lesquel le récrit s appuie fortement sur le sujet du ${theme} tout en s appuyant sur ${characteristic} et devra obligatoirement comporter des personnages ayant des caractéristiques ${adjective}, et cette histoire doit être très drôle. Limite cette histoire à 300 mots`,
-      max_tokens: 1500,
-      temperature: 0,
-    })
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    const storyOutput = data.choices[0].text;
-    const outputElement = document.createElement("p");
-    outputElement.innerText = storyOutput;
-    const footer = document.querySelector("footer");
-    footer.parentNode.insertBefore(outputElement, footer.nextSibling);
-
-    const loadingMessage = document.querySelector('main p');
-    const main = document.querySelector('main');
-    main.innerHTML = `<p>${storyOutput}</p>`;
-    loadingMessage.remove();
-  })
-  .catch(error => console.error(error));
-}
-function readText() {
-  const mainText = document.querySelector("main").textContent;
-  const speech = new SpeechSynthesisUtterance();
-  speech.text = mainText;
-  speechSynthesis.speak(speech);
-}
