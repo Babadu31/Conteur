@@ -12,7 +12,7 @@ function generateStory(event) {
   const theme = document.getElementById("theme-input").value;
   const characteristic = document.getElementById("characteristic-input").value;
   const adjective = document.getElementById("adjective-input").value;
-  const apiKey = "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";
+  const apiKey = "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";
 
   fetch("https://api.openai.com/v1/completions", {
     method: "POST",

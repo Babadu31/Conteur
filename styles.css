@@ -86,6 +86,9 @@ main {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
+  background-color: black; /* Ajout du fond noir */
+  color: white; /* Ajout de la police blanche */
+  font-family: Arial, sans-serif; /* Utilisation de la même police que le reste du site HTML */
 }
   
 h2 {
