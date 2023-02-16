@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Générateur d'histoires</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Générateur d'histoires</h1>
+    <nav>
+      <ul>
+        <li><a href="#" (click)="logout()" *ngIf="authService.isAuthenticated()">Déconnexion</a></li>
+        <li><a href="#" (click)="login()" *ngIf="!authService.isAuthenticated()">Connexion</a></li>
+        <li><a href="autres-contes.html">Autres contes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <form id="story-form">
+    <label for="theme-input">Thème :</label><br>
+    <input type="text" id="theme-input" name="theme"><br>
+    <label for="characteristic-input">Caractéristique de l'histoire :</label><br>
+    <input type="text" id="characteristic-input" name="characteristic"><br>
+    <label for="adjective-input">Adjectif des personnages :</label><br>
+    <input type="text" id="adjective-input" name="adjective"><br>
+    <input type="submit" value="Générer l'histoire">
+  </form>
+  <main>
+    <p id="loading-message">Veuillez patienter pendant la génération de l'histoire...</p>
+  </main>
+  <footer>
+    <p>With ChatGPT</p>
+  </footer>
+  <button onclick="readText()">Lire l'histoire</button>
+  <script src="scripts.js"></script>
+</body>
+</html>
