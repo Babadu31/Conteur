@@ -13,6 +13,7 @@
         <li><a href="#" (click)="logout()" *ngIf="authService.isAuthenticated()">Déconnexion</a></li>
         <li><a href="#" (click)="login()" *ngIf="!authService.isAuthenticated()">Connexion</a></li>
         <li><a href="autres-contes.html">Autres contes</a></li>
+        <li><a href="chat.html">Chatbot pour enfants</a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +32,8 @@
   <footer>
     <p>With ChatGPT</p>
   </footer>
-  <button onclick="readText()">Lire l'histoire</button>
+  <button onclick="readText()">Lire l'histoire
+  </button>
   <script src="scripts.js"></script>
 </body>
 </html>
