@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   async function generateResponse(message) {
-    const apiKey = "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";
+    const apiKey = "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";
     const response = await fetch("https://api.openai.com/v1/engines/text-davinci-003/completions", {
       method: "POST",
       headers: {

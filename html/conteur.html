@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Générateur d'histoires</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Générateur d'histoires</h1>
+    <nav>
+      <ul>
+        <li><a href="/html/autres-contes.html">Autres contes</a></li>
+        <li><a href="/html/chat.html">Chatbot pour enfants</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form id="story-form">
+      <label for="theme-input">Thème :</label>
+      <input type="text" id="theme-input" name="theme">
+      <label for="characteristic-input">Caractéristique de l'histoire :</label>
+      <input type="text" id="characteristic-input" name="characteristic">
+      <label for="adjective-input">Adjectif des personnages :</label>
+      <input type="text" id="adjective-input" name="adjective">
+      <input type="submit" value="Générer l'histoire">
+    </form>
+    <p id="loading-message">Veuillez patienter pendant la génération de l'histoire...</p>
+  </main>
+  <footer>
+    <p>With ChatGPT</p>
+  </footer>
+  <button onclick="readText()">Lire l'histoire</button>
+  <script src="/javascript/scripts.js"></script>
+</body>
+</html>
