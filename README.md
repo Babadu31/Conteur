@@ -1,3 +1,4 @@
+![Logo](https://github.com/Babadu31/Conteur/blob/main/images/ms-icon-310x310.png)
 # Story Gerator
 # 1-Introduction
 
