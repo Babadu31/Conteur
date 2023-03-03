@@ -55,9 +55,12 @@ To achieve this result I did not need to create a back-end, I would have needed 
 Provide an overview of 1-3 features you have completed.
 1: story generation
 create a story with the chosen filters
+![alt](https://github.com/Babadu31/Conteur/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-03-03%20120608.png)
+![alt](https://github.com/Babadu31/Conteur/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-03-03%20120647.png)
 
 2: voice reading
 When the button is pressed it will read aloud the generated story
+![alt](https://github.com/Babadu31/Conteur/blob/main/images/Capture%20d%E2%80%99%C3%A9cran%202023-03-03%20120837.png)
  
 # 4-Write down your most difficult technical challenge in depth
 The most difficult technical challenge I encountered while making this project was to properly format the prompt I sent to chat gpt so that the result matched the purpose. For example, I had to add the phrase “you are a writer” to make the result look better. At first I had to fix api key issues because the request fails as chat gpt did not recognize or see the chat gpt api key.In addition to these two problems already mentioned, I had to learn to manage the maximum number of tokens by testing and modifying the form of the request so that the result does not exceed the maximum possible length. To achieve this result I had to study the gtp chat api, understand how it works, the different possibilities with the different versions.
