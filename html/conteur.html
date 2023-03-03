@@ -6,8 +6,10 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
+  <!-- En-tête de la page -->
   <header>
     <h1>Générateur d'histoires</h1>
+    <!-- Navigation de la page -->
     <nav>
       <ul>
         <li><a href="/html/autres-contes.html">Autres contes</a></li>
@@ -15,7 +17,9 @@
       </ul>
     </nav>
   </header>
+  <!-- Contenu principal de la page -->
   <main>
+    <!-- Formulaire pour générer des histoires -->
     <form id="story-form">
       <label for="theme-input">Thème :</label>
       <input type="text" id="theme-input" name="theme">
@@ -25,12 +29,16 @@
       <input type="text" id="adjective-input" name="adjective">
       <input type="submit" value="Générer l'histoire">
     </form>
+    <!-- Paragraphe pour afficher l'histoire générée -->
     <p id="loading-message">Veuillez patienter pendant la génération de l'histoire...</p>
   </main>
+  <!-- Pied de page de la page -->
   <footer>
     <p>With ChatGPT</p>
   </footer>
+  <!-- Bouton pour lire l'histoire à voix haute -->
   <button onclick="readText()">Lire l'histoire</button>
+  <!-- Script JavaScript pour la fonctionnalité du formulaire et de la lecture vocale -->
   <script src="/javascript/scripts.js"></script>
 </body>
 </html>

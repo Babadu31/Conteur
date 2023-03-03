@@ -1,14 +1,19 @@
 /* Styles généraux */
 body {
+  /* Définit la police de caractères pour le corps de la page */
   font-family: 'Lombardina Initial Two', cursive;
+  /* Définit l'image de fond pour le corps de la page */
   background: white url('/images/image_de_fond.png') no-repeat fixed center;
   background-size: cover;
+  /* Définit les marges pour le corps de la page */
   margin: 0;
+  /* Définit la transition pour l'opacité de la page */
   transition: opacity 0.5s ease-in-out;
 }
 
 /* En-tête */
 header {
+  /* Définit la couleur de fond et la couleur du texte pour l'en-tête */
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -75,6 +80,7 @@ input[type="submit"]:hover {
 
 /* Pied de page */
 footer {
+  /* Définit la couleur de fond et la couleur du texte pour le pied de page */
   background-color: #333;
   color: #fff;
   padding: 10px;
@@ -119,16 +125,13 @@ a:hover {
 
 /* Style pour le bouton de lecture vocale */
 button {
-  position: relative; /* modifier la position en relative pour ne pas affecter le positionnement absolu de ses enfants */
-  z-index: 2; /* définir un z-index supérieur à celui de main */
-  margin: 10px; /* ajouter une marge pour plus d'espace */
+  /* Définit la position relative pour ne pas affecter le positionnement absolu de ses enfants */
+  position: relative;
+  /* Définit un z-index supérieur à celui de main */
+  z-index: 2;
+  /* Ajoute une marge pour plus d'espace */
+  margin: 10px;
 }
 
 .parallax {
-  background: url('/images/image_de_fond.png') no-repeat fixed center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  z-index: -1;
-}
+  /* Définit l'image de fond en parallaxe

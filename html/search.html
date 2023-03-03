@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recherche d'histoires</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+  <header>
+    <h1>Recherche d'histoires</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/html/autres-contes.html">Autres contes</a></li>
+        <li><a href="/html/chat.html">Chatbot pour enfants</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form id="story-form">
+      <label for="keywords-input">Mots-clés :</label>
+      <input type="text" id="keywords-input" name="keywords">
+      <input type="submit" value="Rechercher">
+    </form>
+    <div id="story-output"></div>
+  </main>
+  <footer>
+    <p>With ChatGPT</p>
+  </footer>
+  <script src="/javascript/search.js"></script>
+</body>
+</html>
